@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Random Recipe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Bienvenue sur Random Recipe !</h1>
+      <button id="getRandomRecipe">Sur quel plat allez-vous tomber 😋 ?</button>
+    </div>
+    <div id="recipeContainer" class="hidden">
+      <h2 id="recipeName"></h2>
+      <p id="recipeCountry"></p>
+      <img id="recipeImage" src="" alt="Image de la recette">
+      <div class="coontainer">
+        <div style="width:20%">
+          <h3 class="non">Ingrédients :</h3>
+          <ul id="recipeIngredients"></ul>
+        </div>
+
+        <div style="width:70%">
+          <h3 class="oui">Instructions :</h3>
+          <p id="recipeInstructions"></p>
+        </div>
+
+
+      </div>
+
+    </div>
+    <h3 class="ytb">Voici la vidéo qui vous montrera la recette : </h3>
+    <a href="" target='_blank' class="lien Youtube"></a>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

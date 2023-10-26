@@ -1,0 +1,177 @@
+@import "https://unpkg.com/open-props"; /* bouton pris d'un site très stylé */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('Cook.jpg');
+  background-size: cover;
+  /* change la taille de l'image pour que ça prenne tout l'écran */
+  background-repeat: no-repeat;
+  /* pas de répétition d'image */
+  background-attachment: fixed;
+  /* fixe l'image en arrière-plan */
+}
+
+
+button {
+  font-family: var(--font-sans); /* De la ligne 19 à 26 merci internet je savais pas faire */
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-5);
+  color: var(--gray-8);
+  background: var(--gray-0);
+  border: 0;
+  padding: var(--size-4) var(--size-8);
+  transform: translate(-50%, -50%);
+  /* Ajustez la position pour le centrer */
+  transition: transform 0.1s;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  font-size: 24px;
+  background-color: #fff;
+  border: none;
+  padding: 20px;
+  align-self: flex-start;
+}
+
+button:hover {
+  --y: -10;
+  --scale: 1.1;
+  --border-scale: 1;
+  color: var(--gray-8);
+  /* Couleur de texte en survol */
+  background: var(--gray-0);
+  /* "" fond "" */
+}
+
+button:active {
+  --y: 5%;
+  --scale: 0.9;
+  --border-scale: 0.9, 0.8;
+}
+
+
+button:before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--size-3) * -1);
+  border: var(--size-2) solid var(--gray-0);
+  transform: scale(var(--border-scale, 0));
+  transition: transform 0.125s;
+
+  --angle-one: 105deg; /* Pareil jusqu'a la 85 */
+  --angle-two: 290deg;
+  --spread-one: 30deg;
+  --spread-two: 40deg;
+  --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+  --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+  --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+  --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+
+  -webkit-mask: conic-gradient(transparent 0 var(--start-one),
+      white var(--start-one) var(--end-one),
+      transparent var(--end-one) var(--start-two),
+      white var(--start-two) var(--end-two),
+      transparent var(--end-two));
+
+  mask: conic-gradient(transparent 0 var(--start-one),
+      white var(--start-one) var(--end-one),
+      transparent var(--end-one) var(--start-two),
+      white var(--start-two) var(--end-two),
+      transparent var(--end-two));
+
+  z-index: -1;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff;
+  /* Couleur du texte du titre */
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  /* Style pour le conteneur */
+  background-image: url('Cook.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+  width: 250px;
+}
+
+.container {
+
+  background-image: url('Cook.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.header {
+  text-align: left;
+}
+
+/* Style pour les ingrédients */
+#recipeIngredients {
+  color: #000000;
+/* Couleur du texte pour les ingrédients (par exemple, noir) */
+  margin-left: -2vw;
+  margin-left: 30px;
+  background-color: rgba(256, 256, 256, 0.8);
+}
+
+.coontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Style pour les instructions */
+#recipeInstructions {
+  color: #000000;
+  margin-left: 30px;
+  background-color: rgba(256, 256, 256, 0.8);
+}
+
+.oui {
+  color: #0095ff;
+  margin-left: 35px;
+}
+
+.non {
+  color: #0095ff;
+  margin-left: 35px;
+}
+
+#recipeName {
+  color: #0cebff;
+  margin-left: 150px;
+}
+
+#recipeCountry {
+  color: #0cebff;
+  margin-left: 280px;
+}
+
+#recipeImage {
+  margin-left: 270px;
+}
+
+.ytb {
+  color: aquamarine;
+}
+
+.Youtube {
+  color: red;
+}
