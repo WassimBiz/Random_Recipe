@@ -175,3 +175,20 @@ img {
 .Youtube {
   color: red;
 }
+
+@media screen and (min-width: 400px) {
+
+  #recipeContainer {
+      margin-top: 100px;
+  }
+
+  #recipeName {
+      font-size: 35px;
+  }
+}
+@media screen and (max-width: 876px) {
+
+  #recipeInstructions {
+      margin-top: 100px;
+  }
+}
